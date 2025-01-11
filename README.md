@@ -11,7 +11,7 @@ Each assignment is stored in a seperate branch.
 5. PA5
 
 ## Micro Assignments
-1. [MA1](/tree/ma1)
+1. [MA1](https://github.com/cole-wilson/cpts223/tree/ma1)
 2. MA2
 3. MA3
 4. MA4
