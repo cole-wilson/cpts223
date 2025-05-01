@@ -26,12 +26,12 @@ int main()
     // sending connection request
     connect(clientSocket, (struct sockaddr*)&serverAddress, sizeof(serverAddress));
 
-    cout << "connected..." << endl;
+    // cout << "connected..." << endl;
 
-        string a = "hei";
-            cout << "a..." << endl;
-            send(clientSocket, a.c_str(), strlen(a.c_str()), 0);
-    cout << "sent..." << endl;
+        // string a = "hei";
+            // cout << "a..." << endl;
+            // send(clientSocket, a.c_str(), strlen(a.c_str()), 0);
+    // cout << "sent..." << endl;
 
     // sending data
     const Message message = {

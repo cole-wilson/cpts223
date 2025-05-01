@@ -47,7 +47,7 @@ int main() {
     // wait for N_CLIENTS to join the party
     int clients[N_CLIENTS];
     for (int i=0;i<N_CLIENTS;i++) {
-        cout << i << endl;
+        // cout << i << endl;
         clients[i] = accept(serverSocket, nullptr, nullptr);
         cout << "connected client " << i << ", id:" << clients[i] << endl;
     }
