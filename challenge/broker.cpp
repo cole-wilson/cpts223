@@ -61,6 +61,7 @@ int main() {
 
             // get a message from client
             int amount = recv(clients[i], message, sizeof(*message), 0);
+            cout << amount << endl;
 
             // check we actually got data...
             if (amount == 0) continue;
