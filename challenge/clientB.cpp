@@ -26,8 +26,8 @@ int main()
     // sending data
     Message message = {
         .type = SUBSCRIBE,
-        .priority = 0,
         .topic_name = "Emergency",
+        .priority = 0,
         .content = ""
     };
     send(clientSocket, &message, sizeof(message), 0);
