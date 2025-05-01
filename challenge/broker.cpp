@@ -60,10 +60,10 @@ int main() {
         for (int i=0;i<N_CLIENTS;i++) {
 
             // get a message from client
-            recv(clients[i], message, sizeof(*message), 0);
+            int amount = recv(clients[i], message, sizeof(*message), 0);
 
             // check we actually got data...
-            // if (amount == 0) continue;
+            if (amount == 0) continue;
 
             // 3 message types!
             if (message->type == CREATE_TOPIC) {
