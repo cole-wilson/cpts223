@@ -39,6 +39,7 @@ int main()
 
     while (true) {
         int amount = recv(clientSocket, messageRecv, sizeof(*messageRecv), 0);
+        if (amount == 0) continue;
         cout << messageRecv->topic_name << " Message recieved (priority " << messageRecv->priority << "): " << messageRecv->content << endl;
     }
     // close socket

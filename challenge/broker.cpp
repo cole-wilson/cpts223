@@ -70,15 +70,19 @@ int main() {
             if (message->type == CREATE_TOPIC) {
                 // create a new topic by making a spot in topic_clients;
                 topic_clients[message->topic_name] = {};
+                cout << "created" << endl;
             }
             else if (message->type == SUBSCRIBE) {
                 // add client id to the topic client
                 topic_clients[message->topic_name].push_back(clients[i]);
+                cout << "subscribed" << endl;
+
             }
             else if (message->type == PUBLISH) {
                 cout << "got message published from client " << i << ": " << message->content << "... forwarding to clients!" << endl;
                 // add the message to the priority queue using it's priority and a custom comparator
                 topic_messages[message->topic_name].push(*message);
+                cout << "published" << endl;
             }
         }
 
