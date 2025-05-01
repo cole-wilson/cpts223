@@ -36,8 +36,8 @@ int main()
     // sending data
     const Message message = {
         .type = CREATE_TOPIC,
-        .priority = 0,
         .topic_name = "Emergency",
+        .priority = 0,
         .content = ""
     };
     send(clientSocket, &message, sizeof(message), 0);
@@ -50,8 +50,9 @@ int main()
     // reuse Message from before
     const Message messageSend = {
         .type = PUBLISH,
-        .priority = 1,
         .topic_name = "Emergency",
+        .priority = 1,
+
         .content = "Snoqualmie Pass Closed!"
     };
 
